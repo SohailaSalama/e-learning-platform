@@ -41,7 +41,6 @@
   - Students must be able to view their course completion progress and grades.
   - Instructors must be able to track the performance of students in their courses.
 
-
 ## Non-Functional Requirements:
 
 - **Scalability**:

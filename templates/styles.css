@@ -1,67 +1,145 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
 body {
     font-family: Arial, sans-serif;
-    margin: 0;
-    background-color: #f8f9fa;
+    background-color: #f4f4f4;
     color: #333;
 }
 
-header {
-    background-color: #343a40;
-    color: #fff;
-    padding: 1rem;
-    text-align: center;
+.top-nav {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+    background-color: #333;
+    color: white;
 }
 
-header nav a {
-    color: #fff;
-    margin: 0 1rem;
+.nav-left .icon-link,
+.nav-right .icon-link {
+    color: white;
+    text-decoration: none;
+    font-size: 24px;
+    margin: 0 10px;
+}
+
+.user-account {
+    position: relative;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: white;
+    min-width: 150px;
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+}
+
+.user-account:hover .dropdown-content {
+    display: block;
+}
+
+.dropdown-content ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+.dropdown-content ul li {
+    padding: 10px;
+    border-bottom: 1px solid #ddd;
+}
+
+.dropdown-content ul li a {
+    color: #333;
     text-decoration: none;
 }
 
-header nav a:hover {
-    text-decoration: underline;
+.dropdown-content ul li:hover {
+    background-color: #ddd;
 }
 
-main {
-    padding: 2rem;
-}
-
-footer {
-    background-color: #343a40;
-    color: #fff;
-    text-align: center;
-    padding: 1rem;
-}
-
-.form-section {
-    max-width: 400px;
-    margin: 2rem auto;
-    padding: 1rem;
+.main-nav {
     background-color: #fff;
-    border: 1px solid #ddd;
-    border-radius: 5px;
+    padding: 15px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
-form label {
-    display: block;
-    margin-bottom: 0.5rem;
+.main-nav ul {
+    display: flex;
+    justify-content: center;
+    list-style-type: none;
 }
 
-form input, form select, form button {
-    display: block;
-    width: 100%;
-    padding: 0.5rem;
-    margin-bottom: 1rem;
-    border: 1px solid #ddd;
-    border-radius: 5px;
+.main-nav ul li {
+    margin: 0 20px;
 }
 
-form button {
-    background-color: #28a745;
-    color: #fff;
-    cursor: pointer;
+.main-nav ul li a {
+    text-decoration: none;
+    font-size: 18px;
+    color: #333;
 }
 
-form button:hover {
-    background-color: #218838;
+.main-nav ul li a:hover {
+    color: #007bff;
+}
+
+.welcome-message {
+    padding: 30px;
+    background-color: #fff;
+    margin-top: 20px;
+    text-align: center;
+    border-radius: 8px;
+}
+
+.welcome-message h1 {
+    font-size: 36px;
+    margin-bottom: 10px;
+}
+
+.welcome-message p {
+    font-size: 20px;
+}
+
+.course-info {
+    padding: 30px;
+    background-color: #fff;
+    margin-top: 20px;
+    border-radius: 8px;
+}
+
+.course-info h2 {
+    font-size: 28px;
+    margin-bottom: 10px;
+}
+
+.course-info ul {
+    list-style-type: none;
+    padding-left: 0;
+}
+
+.course-info ul li {
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+@media screen and (max-width: 768px) {
+    .top-nav {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .main-nav ul {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .main-nav ul li {
+        margin-bottom: 10px;
+    }
 }
